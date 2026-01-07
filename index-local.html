@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. Zheng's World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Music Player Button (Top Right) -->
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+        <span class="speaker-icon">🔊</span>
+    </button>
+
+    <!-- Back to Home Link removed for local version -->
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/musics/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section: Video + Artistic Description -->
+    <section id="top" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/video/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-text">
+            <h1 class="hero-name">Ruichen Zheng</h1>
+            <p class="tagline">Dartmouth '26</p>
+            <p class="tagline">Traveler. Photographer. Storyteller.</p>
+            <p class="tagline">60+ countries. Endless landscapes. Untamed wildlife.</p>
+            <p class="tagline italic">This is my world.</p>
+        </div>
+    </section>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <ol class="section-links">
+            <li><a href="#education">Education</a></li>
+            <li><a href="#travel-photography">Travel & Photography</a></li>
+            <li><a href="#statistics">Journey Statistics</a></li>
+        </ol>
+    </nav>
+
+    <!-- Education Section -->
+    <section id="education" class="content-section">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-details">
+                <h3>Dartmouth College</h3>
+                <p><strong>Degree:</strong> Bachelor of Science in <em>Mathematics</em> and <em>Computer Science</em></p>
+                <p><strong>Class:</strong> 2026</p>
+                <p><strong>Relevant Coursework:</strong></p>
+                <ol class="coursework-list">
+                    <li>Data Structures & Algorithms</li>
+                    <li>Machine Learning & Deep Learning</li>
+                    <li>Abstract Algebra & Real Analysis</li>
+                    <li>Software Design & Web Development</li>
+                </ol>
+                <p class="coursework-etc">...</p>
+                <p class="resume-link">
+                    <a href="assets/documents/CV_Ruichen%20Zheng3.3.pdf" target="_blank" rel="noopener noreferrer">View My Resume →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel & Photography Section -->
+    <section id="travel-photography" class="content-section">
+        <h2>Travel & Photography</h2>
+
+        <!-- Continent Navigation -->
+        <nav class="continent-nav">
+            <a href="#north-america" class="continent-link">North America</a>
+            <a href="#south-america" class="continent-link">South America</a>
+            <a href="#europe" class="continent-link">Europe</a>
+            <a href="#africa" class="continent-link">Africa</a>
+            <a href="#asia" class="continent-link">Asia</a>
+            <a href="#oceania" class="continent-link">Oceania</a>
+        </nav>
+
+        <!-- Gallery: Expandable Continent Sections -->
+        <div class="gallery">
+
+            <!-- North America -->
+            <div id="north-america" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('north-america')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>North America</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-1.jpg" alt="Carlsbad Caverns National Park, New Mexico">
+                        <figcaption>Carlsbad Caverns NP, NM</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-2.jpg" alt="Hanksville, Utah">
+                        <figcaption>Hanksville, UT</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-3.jpg" alt="Arches National Park, Utah">
+                        <figcaption>Arches NP, UT</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-4.jpg" alt="Manhattan, New York City">
+                        <figcaption>Manhattan, NYC</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-5.jpg" alt="New Harbor, Maine">
+                        <figcaption>New Harbor, ME</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-6.jpg" alt="Grand Teton National Park, Wyoming">
+                        <figcaption>Grand Teton NP, WY</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-7.jpg" alt="NRAO VLA, New Mexico">
+                        <figcaption>NRAO VLA, NM</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/north-america/NA-8.jpg" alt="Salt Lake City, Utah">
+                        <figcaption>Salt Lake City, UT</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- South America -->
+            <div id="south-america" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('south-america')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>South America</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-1.jpg" alt="Easter Island, Chile">
+                        <figcaption>Easter Island, Chile</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-2.jpg" alt="Santiago, Chile">
+                        <figcaption>Santiago, Chile</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-3.jpg" alt="Paracas, Peru">
+                        <figcaption>Paracas, Peru</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-4.jpg" alt="Paracas, Peru">
+                        <figcaption>Paracas, Peru</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-5.jpg" alt="Islas Ballestas, Peru">
+                        <figcaption>Islas Ballestas, Peru</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-6.jpg" alt="Sacred Valley, Peru">
+                        <figcaption>Sacred Valley, Peru</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-7.jpg" alt="Machu Picchu, Peru">
+                        <figcaption>Machu Picchu, Peru</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/south-america/SA-8.jpg" alt="Arequipa, Peru">
+                        <figcaption>Arequipa, Peru</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Europe -->
+            <div id="europe" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('europe')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>Europe</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-1.jpg" alt="São Miguel, Azores">
+                        <figcaption>São Miguel, Azores</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-2.jpg" alt="Lisbon, Portugal">
+                        <figcaption>Lisbon, Portugal</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-3.jpg" alt="Belém, Portugal">
+                        <figcaption>Belém, Portugal</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-4.jpg" alt="Sintra, Portugal">
+                        <figcaption>Sintra, Portugal</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-5.jpg" alt="Porto, Portugal">
+                        <figcaption>Porto, Portugal</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-6.jpg" alt="Barcelona, Spain">
+                        <figcaption>Barcelona, Spain</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-7.jpg" alt="Paris, France">
+                        <figcaption>Paris, France</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-8.jpg" alt="Lyon, France">
+                        <figcaption>Lyon, France</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-9.jpg" alt="Marseille, France">
+                        <figcaption>Marseille, France</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-10.jpg" alt="Florence, Italy">
+                        <figcaption>Florence, Italy</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-11.jpg" alt="San Marino">
+                        <figcaption>San Marino</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-12.jpg" alt="Venice, Italy">
+                        <figcaption>Venice, Italy</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-13.jpg" alt="D400, Turkey">
+                        <figcaption>D400, Turkey</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-14.jpg" alt="Istanbul, Turkey">
+                        <figcaption>Istanbul, Turkey</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-15.jpg" alt="Athens, Greece">
+                        <figcaption>Athens, Greece</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-16.jpg" alt="Budapest, Hungary">
+                        <figcaption>Budapest, Hungary</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-17.jpg" alt="Sofia, Bulgaria">
+                        <figcaption>Sofia, Bulgaria</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-18.jpg" alt="Sarajevo, Bosnia and Herzegovina">
+                        <figcaption>Sarajevo, Bosnia and Herzegovina</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-19.jpg" alt="Tallinn, Estonia">
+                        <figcaption>Tallinn, Estonia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-20.jpg" alt="Prague, Czechia">
+                        <figcaption>Prague, Czechia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-21.jpg" alt="Amsterdam, Netherlands">
+                        <figcaption>Amsterdam, Netherlands</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-22.jpg" alt="Rotterdam, Netherlands">
+                        <figcaption>Rotterdam, Netherlands</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-23.jpg" alt="Berchtesgaden, Germany">
+                        <figcaption>Berchtesgaden, Germany</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/europe/EU-24.jpg" alt="Atlantic Ocean Road, Norway">
+                        <figcaption>Atlantic Ocean Road, Norway</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Africa -->
+            <div id="africa" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('africa')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>Africa</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-1.jpg" alt="Ngorongoro, Tanzania">
+                        <figcaption>Ngorongoro, Tanzania</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-2.jpg" alt="Serengeti, Tanzania">
+                        <figcaption>Serengeti, Tanzania</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-3.jpg" alt="Chobe, Botswana">
+                        <figcaption>Chobe, Botswana</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-4.jpg" alt="Victoria Falls, Zambia & Zimbabwe">
+                        <figcaption>Victoria Falls, Zambia & Zimbabwe</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-5.jpg" alt="Zanzibar, Tanzania">
+                        <figcaption>Zanzibar, Tanzania</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-6.jpg" alt="Volubilis, Morocco">
+                        <figcaption>Volubilis, Morocco</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-7.jpg" alt="Rabat, Morocco">
+                        <figcaption>Rabat, Morocco</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-8.jpg" alt="Tangier, Morocco">
+                        <figcaption>Tangier, Morocco</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-9.jpg" alt="Cairo, Egypt">
+                        <figcaption>Cairo, Egypt</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/africa/AF-10.jpg" alt="Luxor, Egypt">
+                        <figcaption>Luxor, Egypt</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Asia -->
+            <div id="asia" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('asia')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>Asia</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-1.jpg" alt="Hong Kong S.A.R, China">
+                        <figcaption>Hong Kong S.A.R, China</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-2.jpg" alt="Shanghai, China">
+                        <figcaption>Shanghai, China</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-3.jpg" alt="Wadi Rum, Jordan">
+                        <figcaption>Wadi Rum, Jordan</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-4.jpg" alt="Wadi Rum, Jordan">
+                        <figcaption>Wadi Rum, Jordan</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-5.jpg" alt="Aqaba, Jordan">
+                        <figcaption>Aqaba, Jordan</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-6.jpg" alt="Jeddah, Saudi Arabia">
+                        <figcaption>Jeddah, Saudi Arabia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-7.jpg" alt="Doha, Qatar">
+                        <figcaption>Doha, Qatar</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-8.jpg" alt="Ras Al Khaimah, UAE">
+                        <figcaption>Ras Al Khaimah, UAE</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-9.jpg" alt="Abu Dhabi, UAE">
+                        <figcaption>Abu Dhabi, UAE</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-10.jpg" alt="Liwa Desert, UAE">
+                        <figcaption>Liwa Desert, UAE</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-11.jpg" alt="Sir Bani Yas Island, UAE">
+                        <figcaption>Sir Bani Yas Island, UAE</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-12.jpg" alt="Jabal Samhan, Oman">
+                        <figcaption>Jabal Samhan, Oman</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-13.jpg" alt="Jabal Akhdar, Oman">
+                        <figcaption>Jabal Akhdar, Oman</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-14.jpg" alt="Muscat, Oman">
+                        <figcaption>Muscat, Oman</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-15.jpg" alt="Manama, Bahrain">
+                        <figcaption>Manama, Bahrain</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-16.jpg" alt="Alishan, Taiwan, China">
+                        <figcaption>Alishan, Taiwan, China</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-17.jpg" alt="Sun Moon Lake, Taiwan, China">
+                        <figcaption>Sun Moon Lake, Taiwan, China</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-18.jpg" alt="Jiuzhai Valley, China">
+                        <figcaption>Jiuzhai Valley, China</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-19.jpg" alt="Uluwatu, Indonesia">
+                        <figcaption>Uluwatu, Indonesia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-20.jpg" alt="Khao Yai National Park, Thailand">
+                        <figcaption>Khao Yai National Park, Thailand</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-21.jpg" alt="Kazbegi, Georgia">
+                        <figcaption>Kazbegi, Georgia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-22.jpg" alt="Kazbegi, Georgia">
+                        <figcaption>Kazbegi, Georgia</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-23.jpg" alt="Baku, Azerbaijan">
+                        <figcaption>Baku, Azerbaijan</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/asia/AS-24.jpg" alt="Teghut, Armenia">
+                        <figcaption>Teghut, Armenia</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Oceania -->
+            <div id="oceania" class="continent-section">
+                <button class="continent-toggle" onclick="toggleContinent('oceania')">
+                    <span class="toggle-icon">▼</span>
+                    <h3>Oceania</h3>
+                </button>
+                <div class="photo-grid">
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-1.jpg" alt="Mt. Cook, New Zealand">
+                        <figcaption>Mt. Cook, NZ</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-2.jpg" alt="Tasman River, New Zealand">
+                        <figcaption>Tasman River, NZ</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-3.jpg" alt="Lake Tekapo, New Zealand">
+                        <figcaption>Lake Tekapo, NZ</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-4.jpg" alt="Lake Pukaki, New Zealand">
+                        <figcaption>Lake Pukaki, NZ</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-5.jpg" alt="Milford Sound, New Zealand">
+                        <figcaption>Milford Sound, NZ</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" src="assets/images/oceania/OC-6.jpg" alt="Auckland, New Zealand">
+                        <figcaption>Auckland, NZ</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Journey Statistics Table -->
+    <section id="statistics" class="content-section">
+        <h2>Journey Statistics</h2>
+        <table class="stats-table">
+            <caption>My Travel Journey by the Numbers</caption>
+            <thead>
+                <tr>
+                    <th>Continent</th>
+                    <th>Countries Visited</th>
+                    <th>Favorite Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>North America</td>
+                    <td>3</td>
+                    <td>Utah, USA</td>
+                </tr>
+                <tr>
+                    <td>South America</td>
+                    <td>2</td>
+                    <td>Easter Island, Chile</td>
+                </tr>
+                <tr>
+                    <td>Europe</td>
+                    <td>33</td>
+                    <td>Azores, Portugal</td>
+                </tr>
+                <tr>
+                    <td>Africa</td>
+                    <td>7</td>
+                    <td>Serengeti, Tanzania</td>
+                </tr>
+                <tr>
+                    <td>Asia</td>
+                    <td>19</td>
+                    <td>Jiuzhai Valley, China</td>
+                </tr>
+                <tr>
+                    <td>Oceania</td>
+                    <td>2</td>
+                    <td>New Zealand</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>66</th>
+                    <th>—</th>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- Back to Top Link -->
+    <div class="back-to-top">
+        <a href="#top">↑ Back to Top</a>
+    </div>
+
+    <!-- Footer with Contact Links -->
+    <footer>
+        <p>Contact:
+            <a href="mailto:zrc439@outlook.com" target="_blank" rel="noopener noreferrer" title="Email">
+                <span class="contact-icon">✉</span> Email
+            </a>
+             |
+            <a href="https://weixin.qq.com/" target="_blank" rel="noopener noreferrer" title="WeChat: zrc_439">
+                <span class="contact-icon">💬</span> WeChat
+            </a>
+        </p>
+        <p>&copy; 2025 Ruichen Zheng</p>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeResumeModal()">&times;</span>
+            <iframe id="resumeFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
