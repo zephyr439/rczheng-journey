@@ -307,31 +307,46 @@ body {
 .continent-nav {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 3rem;
     flex-wrap: wrap;
-    margin: 2rem 0 3rem 0;
-    padding: 1.5rem;
     background: var(--secondary-bg);
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    margin: 2rem 0 3rem 0;
 }
 
 .continent-link {
     color: var(--text-primary);
     text-decoration: none;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    background: var(--primary-bg);
-    transition: var(--transition);
+    font-size: 1.1rem;
     font-weight: 500;
-    font-size: 0.95rem;
-    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.continent-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--text-accent);
+    transition: var(--transition);
+    transform: translateX(-50%);
 }
 
 .continent-link:hover {
-    background: var(--text-accent);
-    color: var(--primary-bg);
-    border-color: var(--text-accent);
+    color: var(--text-accent);
+}
+
+.continent-link:hover::after {
+    width: 100%;
 }
 
 /* Gallery */
