@@ -317,9 +317,10 @@ body {
     margin: 2rem 0 3rem 0;
 }
 
-.mobile-break {
-    display: none;
-    width: 100%;
+.nav-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: nowrap;
 }
 
 .continent-link {
@@ -330,6 +331,7 @@ body {
     transition: var(--transition);
     position: relative;
     padding-bottom: 5px;
+    white-space: nowrap;
 }
 
 .continent-link::after {
@@ -591,8 +593,8 @@ footer a:hover {
         padding: 0.8rem 0;
     }
 
-    .mobile-break {
-        display: block;
+    .nav-row {
+        gap: 0.5rem;
     }
 
     .continent-link {
