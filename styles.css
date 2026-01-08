@@ -589,16 +589,18 @@ footer a:hover {
     }
 
     .continent-nav {
-        gap: 0.5rem;
-        padding: 0.8rem 0;
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
     }
 
     .nav-row {
-        gap: 0.5rem;
+        gap: 1rem;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
     .continent-link {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 3vw, 1rem);
     }
 
     .photo-grid {
